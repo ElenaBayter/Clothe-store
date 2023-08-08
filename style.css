@@ -111,7 +111,6 @@
     line-height: normal;
 }
 .man {
-
     background: linear-gradient(rgba(35, 32, 32, 0.8), rgba(0, 0, 0, 0.5)), url(img/man.png);
 }
 .kids {
@@ -161,9 +160,6 @@
 }
 .item {
     max-width: 360px;
-}
-.item-picture{
-    margin-bottom: 0;
 }
 .item-discription{
     padding: 24px 16px;
