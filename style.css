@@ -6,7 +6,7 @@
 
 .container {
     margin: 0 auto;
-    width: 1140px;
+    max-width: 1140px;
 }
 .header {
     background-color: #222222;
@@ -37,6 +37,9 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+}
+.main-pic{
+    width: 50vw;
 }
 .main-title {
     color: #222;
@@ -76,11 +79,16 @@
     margin-bottom: 30px;
 }
 .square-link {
-    padding-top: 105px;
-    padding-bottom: 105px;
     text-decoration: none;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .women {
+    background-size: cover;
+    background-position: center;
     background: linear-gradient(rgba(35, 32, 32, 0.8), rgba(0, 0, 0, 0.5)),
     url(img/woman.png);
 }
@@ -103,9 +111,12 @@
     line-height: normal;
 }
 .man {
+
     background: linear-gradient(rgba(35, 32, 32, 0.8), rgba(0, 0, 0, 0.5)), url(img/man.png);
 }
 .kids {
+    background-position: center;
+    background-size: cover;
     background: linear-gradient(rgba(35, 32, 32, 0.8), rgba(0, 0, 0, 0.5)), url(img/kids.png);
 }
 .bottom-part {
@@ -143,8 +154,8 @@
     margin-bottom: 47px;
 }
 .list-items {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     margin-bottom: 48px;
 }
@@ -199,4 +210,57 @@
 .center{
     display: flex;
     justify-content: center;
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        max-width: 734px;
+    }
+    .logo {
+        margin-right: 40px;
+    }
+    .main-pic{
+        min-width: 386px;
+    }
+    .main-title {
+        color: #222;
+        font-family: Lato;
+        font-size: 44px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: normal;
+        margin-left: 16px;
+    }
+    .main-black {
+        color: #222;
+        font-family: Lato;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    .main-pink {
+        color: #F16D7F;
+        font-family: Lato;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    .square-link {
+        max-height: 167px;
+    }
+
+    .list-items {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+    .list-title {
+        margin-bottom: 3px;
+    }
+    .small-dsc {
+        margin-bottom: 73px;
+    }
 }
