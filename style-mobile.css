@@ -35,4 +35,44 @@
     .item-picture{
         max-width: 89vw;
     }
+    .product-info .flex{
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+    }
+    .info-card{
+        max-width: 340px;
+    }
+    .product-info{
+        margin-bottom: 60px;
+    }
+    .subscribe .flex{
+        display: flex;
+        flex-direction: column;
+        gap: 46px;
+    }
+    .subscribe-card{
+        width: 343px;
+    }
+    .subscribe{
+        padding: 0 0 43px 0;
+    }
+    .subscribe-text{
+        font-size: 18px;
+    }
+    .subscribe-title{
+        line-height: 153.2%;
+    }
+    .subscribe-sm{
+        font-size: 14px;
+        line-height: 153.2%;
+    }
+    .footer{
+        padding: 43px 3% 9px 3%;
+    }
+    .footer .flex{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 40px;
+    }
 }
