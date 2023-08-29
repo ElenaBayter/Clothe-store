@@ -182,6 +182,10 @@ a{
     font-weight: 400;
     line-height: normal;
 }
+.item-title:hover{
+    scale: 1.01;
+    text-shadow: 5px 5px 5px rgb(134, 130, 130);
+}
 .xs-dsc {
     color: #5D5D5D;
     font-family: Lato;
@@ -197,6 +201,9 @@ a{
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+}
+.price:hover{
+    text-shadow: 3px 3px 3px #d49da4;
 }
 .btn{
     color: #F26376;
@@ -225,6 +232,10 @@ a{
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 1px solid transparent;
+}
+.info-card:hover{
+    scale: 1.03;
 }
 .info-title {
     color: #FBFBFB;
@@ -317,6 +328,9 @@ a{
     outline: none;
     border: none;
     cursor: pointer;
+}
+.submit__btn:hover{
+    scale: 1.04;
 }
 .submit__btn:active{
     transform: scale(0.95);
