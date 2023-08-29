@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+a{
+    text-decoration: none;
+}
 
 .container {
     margin: 0 auto;
@@ -161,6 +164,9 @@
 .item {
     max-width: 360px;
 }
+.item:hover{
+    box-shadow: 5px 5px 7px rgb(168, 165, 165);
+}
 .item-discription{
     padding: 24px 16px;
     display: flex;
@@ -310,6 +316,10 @@
     padding: 10px;
     outline: none;
     border: none;
+    cursor: pointer;
+}
+.submit__btn:active{
+    transform: scale(0.95);
 }
 .footer{
     background: #222224;
@@ -327,7 +337,7 @@
     display: flex;
     gap: 7.29px;
 }
-.icon{
+.ft-icon{
     width: 32px;
     height: 32px;
     padding: auto;
@@ -336,11 +346,14 @@
     align-items: center;
     background-color: #FFF;
 }
-.icon:hover{
+.ft-icon:hover{
     background-color: #F16D7F;
 }
+.ft-icon:active{
+    transform: scale(0.9);
+}
 
-.icon:hover path{
+.ft-icon:hover path{
     fill: #FFFFFF;
 }
 
