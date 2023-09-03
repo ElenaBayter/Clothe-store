@@ -1,0 +1,135 @@
+@import 'mixins';
+
+$mainDecorateColor: #F16D7F;
+$mainTextColor: #636363;
+
+
+
+.path {
+    background-color: #F8F3F4;
+    padding: 65px 0;
+
+    &__title{
+        @include normal_text;
+        color:  $mainDecorateColor;
+        font-size: 24px;
+        font-weight: 400;
+    }
+    &__breadcrumbs{
+        @include normal_text;
+        color: $mainTextColor;
+        font-size: 14px;
+        font-weight: 300;
+
+        &__decorated{
+            color: $mainDecorateColor
+        }
+    }
+}
+.carousel{
+    background-color: #F7F7F7;
+    padding-top: 11px;
+    padding-bottom: 46px;
+}
+swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+swiper-slide {
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F7F7F7;;
+}
+.productcard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #EAEAEA;
+    padding-top: 60px;
+    margin-bottom: 120px;
+  
+    &__collection{
+        color: $mainDecorateColor;
+        @include normal_text;
+        font-size: 14px;
+        font-weight: 300;
+        margin-bottom: 12px;
+    }
+    &__mark{
+        border-bottom: 3px solid $mainDecorateColor;
+        width: 63px;
+        margin-bottom: 12px;
+    }
+    &__goodname{
+        color: $mainTextColor;
+        @include normal_text;
+        font-size: 18px;
+        font-weight: 300;
+        margin-bottom: 48px;
+    }
+    &__description{
+        @include normal_text;
+        color: $mainTextColor;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 300;
+        margin-bottom: 32px;
+    }
+    &__price{
+        color: $mainDecorateColor;
+        @include normal_text;
+        font-size: 24px;
+        font-weight: 300;
+        margin-bottom: 62px;
+    }
+    &__line{
+        border-bottom: 1px solid #EAEAEA;
+        width: 640px;
+        margin-bottom: 65px;
+    }
+    &__dropdown{
+        display: flex;
+        gap: 22px;
+        margin-bottom: 48px;
+
+        &__item{
+            color: $mainTextColor;
+            @include normal_text;
+            font-size: 14px;
+            font-weight: 400;
+            margin-right: 9px;
+        }
+        &__item::after{
+            content: url(./img/arror.png);
+        }
+    &__btn{
+        border: 1px solid $mainDecorateColor;
+        padding: 15px 57px 15px 24px;
+        color: $mainDecorateColor;
+        @include normal_text;
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 64px;
+    }
+    
+    }
+}
+.productcard__btn{
+    border: 1px solid $mainDecorateColor;
+    padding: 15px 57px 15px 30px;
+    color: $mainDecorateColor;
+    @include normal_text;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 64px;
+}
+.productcard__btn img{
+    margin-right: 22px;
+}
+
+
