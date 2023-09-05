@@ -3,7 +3,7 @@
   padding: 65px 0;
 }
 .path__title {
-  font-family: Lato;
+  font-family: "Lato";
   font-style: normal;
   line-height: normal;
   color: #F16D7F;
@@ -11,7 +11,7 @@
   font-weight: 400;
 }
 .path__breadcrumbs {
-  font-family: Lato;
+  font-family: "Lato";
   font-style: normal;
   line-height: normal;
   color: #636363;
@@ -23,7 +23,7 @@
 }
 
 .carousel {
-  background-color: #F7F7F7;
+  background-color: #F7f7f7;
   padding-top: 11px;
 }
 
@@ -52,7 +52,7 @@
 }
 .productcard__collection {
   color: #F16D7F;
-  font-family: Lato;
+  font-family: "Lato";
   font-style: normal;
   line-height: normal;
   font-size: 14px;
@@ -66,7 +66,7 @@
 }
 .productcard__goodname {
   color: #636363;
-  font-family: Lato;
+  font-family: "Lato";
   font-style: normal;
   line-height: normal;
   font-size: 18px;
@@ -74,7 +74,7 @@
   margin-bottom: 48px;
 }
 .productcard__description {
-  font-family: Lato;
+  font-family: "Lato";
   font-style: normal;
   line-height: normal;
   color: #636363;
@@ -85,7 +85,7 @@
 }
 .productcard__price {
   color: #F16D7F;
-  font-family: Lato;
+  font-family: "Lato";
   font-style: normal;
   line-height: normal;
   font-size: 24px;
@@ -104,7 +104,7 @@
 }
 .productcard__dropdown__item {
   color: #636363;
-  font-family: Lato;
+  font-family: "Lato";
   font-style: normal;
   line-height: normal;
   font-size: 14px;
@@ -118,28 +118,144 @@
   border: 1px solid #F16D7F;
   padding: 15px 57px 15px 24px;
   color: #F16D7F;
-  font-family: Lato;
+  font-family: "Lato";
   font-style: normal;
   line-height: normal;
   font-size: 16px;
   font-weight: 400;
   margin-bottom: 64px;
 }
-
-.productcard__btn {
-  border: 1px solid #F16D7F;
-  padding: 15px 57px 15px 30px;
-  color: #F16D7F;
-  font-family: Lato;
-  font-style: normal;
-  line-height: normal;
-  font-size: 16px;
-  font-weight: 400;
-  margin-bottom: 64px;
-}
-
-.productcard__btn img {
+.productcard__dropdown__btn img {
   margin-right: 22px;
+}
+
+summary {
+  display: block;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+.filter-sort {
+  height: 132px;
+  position: relative;
+  display: flex;
+  gap: 30px;
+  padding-top: 39px;
+  box-sizing: border-box;
+}
+
+.filter {
+  position: relative;
+  padding-top: 13px;
+  width: 360px;
+  box-sizing: border-box;
+  z-index: 10;
+}
+.filter__content {
+  background-color: #fff;
+  padding-top: 0;
+  padding-right: 16px;
+  padding-bottom: 16px;
+  padding-left: 16px;
+}
+.filter[open] {
+  fill: #FFF;
+  box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+}
+.filter[open] .filter__heading {
+  color: #F16D7F;
+}
+.filter[open] path {
+  fill: #F16D7F;
+}
+.filter__summary {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding-left: 16px;
+}
+.filter__heading {
+  font-family: "Lato";
+  font-style: normal;
+  line-height: normal;
+  color: #000;
+  font-size: 14px;
+  font-weight: 600;
+}
+.filter__item {
+  margin-top: 16px;
+}
+.filter__head {
+  font-family: "Lato";
+  font-style: normal;
+  line-height: normal;
+  color: #6F6E6E;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 8px 11px 11px 11px;
+  border-bottom: 1px solid #EBEBEB;
+  border-left: 5px solid #F16D7F;
+}
+.filter__link {
+  color: #6F6E6E;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.filter__link:hover {
+  color: #F16D7F;
+}
+.filter__link-box {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  padding: 24px 16px;
+}
+.filter__item[open] .filter__head {
+  color: #EF5B70;
+}
+
+.sort {
+  padding-top: 12px;
+  display: flex;
+  gap: 18px;
+}
+.sort__details {
+  position: relative;
+}
+.sort__summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.sort__heading {
+  color: #6F6E6E;
+  font-size: 14px;
+  font-weight: 400;
+}
+.sort__check {
+  font-family: "Lato";
+  font-style: normal;
+  line-height: normal;
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  color: #6F6E6E;
+  font-size: 14px;
+  font-weight: 400;
+}
+.sort__box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: #FFF;
+  box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
+  padding: 7px 30px 11px 9px;
+  position: absolute;
+  left: -9px;
+  top: 22px;
 }
 
 * {
@@ -153,6 +269,8 @@ a {
 }
 
 .container {
+  padding-left: calc(50% - 570px);
+  padding-right: calc(50% - 570px);
   margin: 0 auto;
   max-width: 1140px;
 }
@@ -160,6 +278,7 @@ a {
 .header {
   background-color: #222222;
   padding: 20px 0;
+  position: relative;
 }
 
 .flex {

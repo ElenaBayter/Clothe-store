@@ -1,4 +1,6 @@
 @import 'product';
+@import 'details';
+
 
 * {
     margin: 0;
@@ -10,12 +12,14 @@ a{
 }
 
 .container {
+    @include main_padding;
     margin: 0 auto;
     max-width: 1140px;
 }
 .header {
     background-color: #222222;
     padding: 20px 0;
+    position: relative;
 }
 
 .flex {

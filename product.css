@@ -3,7 +3,7 @@
   padding: 65px 0;
 }
 .path__title {
-  font-family: Lato;
+  font-family: "Lato";
   font-style: normal;
   line-height: normal;
   color: #F16D7F;
@@ -11,7 +11,7 @@
   font-weight: 400;
 }
 .path__breadcrumbs {
-  font-family: Lato;
+  font-family: "Lato";
   font-style: normal;
   line-height: normal;
   color: #636363;
@@ -23,7 +23,7 @@
 }
 
 .carousel {
-  background-color: #F7F7F7;
+  background-color: #F7f7f7;
   padding-top: 11px;
 }
 
@@ -52,7 +52,7 @@
 }
 .productcard__collection {
   color: #F16D7F;
-  font-family: Lato;
+  font-family: "Lato";
   font-style: normal;
   line-height: normal;
   font-size: 14px;
@@ -66,7 +66,7 @@
 }
 .productcard__goodname {
   color: #636363;
-  font-family: Lato;
+  font-family: "Lato";
   font-style: normal;
   line-height: normal;
   font-size: 18px;
@@ -74,7 +74,7 @@
   margin-bottom: 48px;
 }
 .productcard__description {
-  font-family: Lato;
+  font-family: "Lato";
   font-style: normal;
   line-height: normal;
   color: #636363;
@@ -85,7 +85,7 @@
 }
 .productcard__price {
   color: #F16D7F;
-  font-family: Lato;
+  font-family: "Lato";
   font-style: normal;
   line-height: normal;
   font-size: 24px;
@@ -104,7 +104,7 @@
 }
 .productcard__dropdown__item {
   color: #636363;
-  font-family: Lato;
+  font-family: "Lato";
   font-style: normal;
   line-height: normal;
   font-size: 14px;
@@ -118,26 +118,13 @@
   border: 1px solid #F16D7F;
   padding: 15px 57px 15px 24px;
   color: #F16D7F;
-  font-family: Lato;
+  font-family: "Lato";
   font-style: normal;
   line-height: normal;
   font-size: 16px;
   font-weight: 400;
   margin-bottom: 64px;
 }
-
-.productcard__btn {
-  border: 1px solid #F16D7F;
-  padding: 15px 57px 15px 30px;
-  color: #F16D7F;
-  font-family: Lato;
-  font-style: normal;
-  line-height: normal;
-  font-size: 16px;
-  font-weight: 400;
-  margin-bottom: 64px;
-}
-
-.productcard__btn img {
+.productcard__dropdown__btn img {
   margin-right: 22px;
 }/*# sourceMappingURL=product.css.map */

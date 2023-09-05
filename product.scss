@@ -1,7 +1,7 @@
 @import 'mixins';
+@import 'vars';
 
-$mainDecorateColor: #F16D7F;
-$mainTextColor: #636363;
+
 
 
 
@@ -27,7 +27,7 @@ $mainTextColor: #636363;
     }
 }
 .carousel{
-    background-color: #F7F7F7;
+    background-color: #F7f7f7;
     padding-top: 11px;
 }
 .carousel-control-prev-icon {
@@ -113,21 +113,14 @@ $mainTextColor: #636363;
         font-size: 16px;
         font-weight: 400;
         margin-bottom: 64px;
+
+        img{
+            margin-right: 22px;
+        }
     }
     
     }
 }
-.productcard__btn{
-    border: 1px solid $mainDecorateColor;
-    padding: 15px 57px 15px 30px;
-    color: $mainDecorateColor;
-    @include normal_text;
-    font-size: 16px;
-    font-weight: 400;
-    margin-bottom: 64px;
-}
-.productcard__btn img{
-    margin-right: 22px;
-}
+
 
 

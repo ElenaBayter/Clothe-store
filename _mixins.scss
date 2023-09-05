@@ -1,0 +1,9 @@
+@mixin normal_text{
+    font-family: 'Lato';
+    font-style: normal;
+    line-height: normal;
+}
+@mixin main_padding{
+    padding-left: calc(50% - 570px);
+    padding-right: calc(50% - 570px);
+}

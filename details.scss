@@ -9,40 +9,191 @@
 
 // }
 
-// summary{
-//     list-style-type: "➜";
-//   }
-  
-//   details[open] > summary{
-//     list-style-type: "⤋";
-//   }
-
+@import 'mixins';
+@import 'vars';
 
 summary {
-    list-style: none;
+    display: block;
+  }
+  
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+.box-content{
+    overflow: hidden;
 }
 
-.contener-detail {
-    display: flex;
-    justify-content: flex-start;
-    gap: 330px;
+#burger{
+    position: absolute;
+    left: -999999px;
+    visibility: hidden;
 
-    .sort {
-        display: flex;
-        gap: 48px;
-
-        .wrap_size {
-            margin-top: 5px;
-            display: flex;
-            flex-direction: column;
-            padding: 9px 30px 12px 9px;
-            background: #fff;
-            box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
-            gap: 6px;
-        }
+    &:checked ~.nav{
+        right: -232px;
     }
 }
 
-svg {
-    margin-left: 10px;
+
+.nav{
+    background: #FFFFFF;
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    width: 232px;
+    padding: 32px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 78px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    transition: right .3s;
 }
+
+.filter-sort{
+    height: 132px;
+    position: relative;
+    display: flex;
+    gap: 30px;
+    padding-top: 39px;
+    box-sizing: border-box;
+}
+.filter{
+    position: relative;
+    padding-top: 13px;
+    width: 360px;
+    box-sizing: border-box;
+    z-index: 10;
+
+    &__content{
+        background-color: #fff;
+        padding-top: 0;
+        padding-right: 16px;
+        padding-bottom: 16px;
+        padding-left: 16px;
+    }
+    
+
+    &[open]{
+        fill: #FFF;
+        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    }
+
+    &[open] .filter__heading{
+        color:  $mainDecorateColor;
+    }
+    &[open] path{
+        fill: $mainDecorateColor;
+    }
+    &__summary{
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        padding-left: 16px;
+    }
+    &__heading{
+        @include normal_text;
+        color: #000;
+        font-size: 14px;
+        font-weight: 600;
+    }
+    &__item{
+        margin-top: 16px;
+    }
+    &__head{
+        @include normal_text;
+        color: $mainTextColor;
+        font-size: 14px;
+        font-weight: 400;
+        padding: 8px 11px 11px 11px;
+        border-bottom: 1px solid #EBEBEB;
+        border-left: 5px solid $mainDecorateColor;
+    }
+    &__link{
+        color: #6F6E6E;
+        font-size: 14px;
+        font-weight: 400;
+        cursor: pointer;
+        &:hover{
+            color: $mainDecorateColor;
+        }
+    }
+    &__link-box{
+        display: flex;
+        flex-direction: column;
+        gap: 11px;
+        padding: 24px 16px;
+    }
+    &__item[open] .filter__head{
+        color: $mainDecorateColor;
+    }
+}
+.sort{
+    padding-top: 12px;
+    display: flex;
+    gap: 18px;
+    
+    &__details{
+        position: relative;
+    }
+
+    &__summary{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__heading{
+        color: $mainTextColor;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    &__check{
+        @include normal_text;
+        display: flex;
+        gap: 9px;
+        align-items: center;
+        color: $mainTextColor;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        background: #FFF;
+        box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
+        padding: 7px 30px 11px 9px;
+        position: absolute;
+        left: -9px;
+        top: 22px
+    }
+}
+
+
+
+
+
+
+
+
+
+// .sort {
+//     display: flex;
+//     gap: 48px;
+
+//     .wrap_size {
+//         margin-top: 5px;
+//         display: flex;
+//         flex-direction: column;
+//         padding: 9px 30px 12px 9px;
+//         background: #fff;
+//         box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
+//         gap: 6px;
+//     }
+// }
+
+// svg {
+//     margin-left: 10px;
+// }
