@@ -18,22 +18,27 @@ a{
 }
 .header {
     background-color: #222222;
-    padding: 20px 0;
     position: relative;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    @include flex_between;
+
+    &_left {
+        @include flex_center(41px);
+    }
+    
+    &_right {
+        @include flex_center(34px);
+    }
 }
 
-.flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 .logo {
     margin-right: 40px;
 }
-.right-side {
-    display: flex;
-    gap: 20px;
-}
+// .right-side {
+//     display: flex;
+//     gap: 20px;
+// }
 
 
 .main {
@@ -227,12 +232,14 @@ a{
     background: #F26376;
 }
 .center{
-    display: flex;
-    justify-content: center;
+    padding-left: calc(50% - $contentWidth/2);
+    padding-right: calc(50% - $contentWidth/2);
 }
 .product-info {
     background: rgba(34, 34, 36, 1);
-    padding: 60px 0;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @include flex_between;
 }
 .info-card {
     display: flex;
@@ -265,13 +272,15 @@ a{
 .subscribe{
     background: linear-gradient(rgba(254, 254, 254, 0.311), rgba(255, 254, 254, 0.269)),
     url("./img/subscribe-bg.png");
-    padding: 96px 0 126px 0;
+    padding-top: 96px;
+    padding-bottom: 126px;
+    @include flex_between;
 }
 .subscribe-card{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 31vw;
+    width: 35vw;
 }
 .subscribe-text{
     margin-top: 30px;
@@ -344,6 +353,7 @@ a{
 .footer{
     background: #222224;
     padding: 24px 8%;
+    @include flex_between;
 }
 .ft-text{
     color: #FBFBFB;
@@ -382,6 +392,11 @@ a{
     .container {
         max-width: 734px;
     }
+    $contentWidth: 736px;
+    .center{
+    padding-left: calc(50% - $contentWidth/2);
+    padding-right: calc(50% - $contentWidth/2);
+}
     .logo {
         margin-right: 40px;
     }
@@ -453,5 +468,88 @@ a{
    
     .footer{
         padding: 24px 3%;
+    }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    $contentWidth: 344px;
+    .center{
+    padding-left: calc(50% - $contentWidth/2);
+    padding-right: calc(50% - $contentWidth/2);
+
+}
+    .container{
+        padding: 0 3%;
+    }
+    .user, .cart, .main-pic{
+        display: none
+    }
+    .flex-main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+    }
+    .top-part{
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        align-items: center;
+    }
+    .square-link{
+        max-width: 343px;
+        width: 100%;
+    }
+    .bottom-part {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        width: 100%;
+    }
+    .list-items {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-bottom: 40px;
+    }
+    .item-picture{
+        max-width: 89vw;
+    }
+    .product-info .flex{
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+    }
+    .info-card{
+        max-width: 340px;
+    }
+    .product-info{
+        margin-bottom: 60px;
+    }
+    .subscribe .flex{
+        display: flex;
+        flex-direction: column;
+        gap: 46px;
+    }
+    .subscribe-card{
+        width: 343px;
+    }
+    .subscribe{
+        padding: 0 0 43px 0;
+    }
+    .subscribe-text{
+        font-size: 18px;
+    }
+    .subscribe-title{
+        line-height: 153.2%;
+    }
+    .subscribe-sm{
+        font-size: 14px;
+        line-height: 153.2%;
+    }
+    .footer{
+        padding: 43px 3% 9px 3%;
+    }
+    .footer .flex{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 40px;
     }
 }

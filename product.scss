@@ -7,7 +7,9 @@
 
 .path {
     background-color: #F8F3F4;
-    padding: 65px 0;
+    padding-top: 65px;
+    padding-bottom: 65px;
+    @include flex_between;
 
     &__title{
         @include normal_text;

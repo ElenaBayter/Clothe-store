@@ -7,3 +7,15 @@
     padding-left: calc(50% - 570px);
     padding-right: calc(50% - 570px);
 }
+@mixin flex_between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex_center($gap){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $gap;
+}

@@ -1,6 +1,10 @@
 .path {
   background-color: #F8F3F4;
-  padding: 65px 0;
+  padding-top: 65px;
+  padding-bottom: 65px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .path__title {
   font-family: "Lato";
