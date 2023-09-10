@@ -1,5 +1,6 @@
 @import 'product';
 @import 'details';
+@import 'cart';
 
 
 * {
@@ -18,7 +19,6 @@ a{
 }
 .header {
     background-color: #222222;
-    position: relative;
     padding-top: 19px;
     padding-bottom: 19px;
     @include flex_between;
@@ -31,15 +31,13 @@ a{
         @include flex_center(34px);
     }
 }
-
-.logo {
-    margin-right: 40px;
+nav.header__right {
+    display: flex;
+    gap: 16px;
 }
-// .right-side {
-//     display: flex;
-//     gap: 20px;
-// }
-
+.logo {
+    margin-right: 20px;
+}
 
 .main {
     background: #F1E4E6;
@@ -398,7 +396,7 @@ a{
     padding-right: calc(50% - $contentWidth/2);
 }
     .logo {
-        margin-right: 40px;
+        margin-right: 20px;
     }
     .main-pic{
         min-width: 386px;

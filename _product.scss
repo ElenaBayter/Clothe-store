@@ -28,16 +28,19 @@
         }
     }
 }
-.carousel{
+.carousel-wrapper{
     background-color: #F7f7f7;
     padding-top: 11px;
+    padding-bottom: 50px;
+    z-index: 2;
 }
+
 .carousel-control-prev-icon {
     background-image: url('data:image/svg+xml,<svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="dashicons:arrow-left-alt2"><path id="Vector" d="M21.6998 7.7499L13.9498 15.4999L21.6998 23.2499L20.1498 26.3499L9.2998 15.4999L20.1498 4.6499L21.6998 7.7499Z" fill="black"/></g></svg>');
     background-color: #2A2A2A26;
 }
 .carousel-control-prev-icon:hover path{
-    fill: #F16D7F;
+    fill: $mainDecorateColor;
 }
 .carousel-control-next-icon {
     background-image: url('data:image/svg+xml,<svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="dashicons:arrow-right-alt2"><path id="Vector" d="M9.2998 23.2499L17.0498 15.4999L9.2998 7.7499L10.8498 4.6499L21.6998 15.4999L10.8498 26.3499L9.2998 23.2499Z" fill="%23F16D7F"/></g></svg>');
@@ -45,13 +48,21 @@
     
 }
 .productcard{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #EAEAEA;
     padding-top: 60px;
     margin-bottom: 120px;
+    @include main_padding;
+    
+    &__wrapper{
+        border: 1px solid #EAEAEA;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #fff;
+        padding-top: 64px;
+        z-index: 1;
+        margin-top: -110px;
+    }
   
     &__collection{
         color: $mainDecorateColor;
@@ -107,6 +118,7 @@
         &__item::after{
             content: url(./img/arror.png);
         }
+    }
     &__btn{
         border: 1px solid $mainDecorateColor;
         padding: 15px 57px 15px 24px;
@@ -119,7 +131,6 @@
         img{
             margin-right: 22px;
         }
-    }
     
     }
 }

@@ -1,0 +1,178 @@
+@import 'mixins';
+
+.cart{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 96px;
+    padding-bottom: 128px;
+
+
+    &__left{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    &__right{
+        display: flex;
+        flex-direction: column;
+        gap: 57px;
+    }
+}
+
+.card{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 650px;
+    box-shadow: 10px 10px 10px rgb(223, 219, 219);
+    border-radius: 0;
+
+    &__img{
+        height: 100%;
+    }
+    &__desc{
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        padding-top: 22px;
+        padding-left: 32px;
+    }
+    &__title{
+        @include normal_text;
+        color: #222;
+        font-size: 24px;
+        font-weight: 400;
+    }
+    &__close{
+        position: absolute;
+        top: 28px;
+        left: 600px;
+    }
+    &__text{
+        @include normal_text;
+        color: #575757;
+        font-size: 22px;
+        font-weight: 400;
+
+        &_color{
+            color: $mainDecorateColor;
+        }
+    }
+    &__input{
+        padding-left: 16px;
+        border: 1px solid #EAEAEA;
+        outline: none;
+        width: 44px;
+        margin-left: 24px;
+
+        &_wrapper{
+            display: flex;
+        }
+    }
+}
+.cart-buttons{
+    @include flex_between;
+
+    &__btn{
+        border: 1px solid #A4A4A4;
+        background-color: #fff;
+        padding: 17px 40px;
+        @include normal_text;
+        color: #000;
+        font-size: 14px;
+        font-weight: 300;
+
+        &:hover{
+            scale: 1.02;
+            box-shadow: 7px 7px 7px rgb(223, 219, 219);
+            transition: 0.2s;
+        }
+    }
+}
+.cart-form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &__title{
+        @include normal_text;
+        color: #222;
+        font-size: 16px;
+        font-weight: 300;
+    }
+
+    &__input{
+        @include normal_text;
+        color: #B1B1B1;
+        font-size: 13px;
+        font-weight: 300;
+        padding: 13px 16px 16px 17px;
+        outline: none;
+        &:hover{
+            scale: 1.01;
+            transition: 0.2s;
+        }
+    }
+    &__btn{
+        @include normal_text;
+        color: #4A4A4A;
+        font-size: 11px;
+        font-weight: 300;
+        border: 1px solid #4A4A4A;
+        padding: 10px 14px 12px;
+        background-color: #FFFFFF;
+        max-width: 101px;
+        &:hover{
+            scale: 1.02;
+            box-shadow: 7px 7px 7px rgb(223, 219, 219);
+        }
+    }
+}
+
+.cart-total{
+    background: #F5F3F3;
+    padding: 39px 34px 42px 44px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    
+
+    &__subtitle{
+        color: #4A4A4A;
+        font-size: 11px;
+        font-weight: 400;
+        margin-bottom: 12px;
+
+        &_margin{
+            margin-left: 25px;
+        }
+    }
+    &__title{
+        color: #222;
+        font-size: 16px;
+        font-weight: 300;
+        margin-bottom: 17px;
+
+        &_color{
+            margin-left: 25px;
+            color: $mainDecorateColor;
+        }
+    }
+    &__line{
+        border-bottom: 2px solid #E2E2E2;
+        margin-bottom: 21px;
+    }
+    &__btn{
+        color: #FFF;
+        font-size: 16px;
+        font-weight: 300;
+        background: $mainDecorateColor;
+        padding: 15px 43px;
+        border: none;
+        &:hover{
+            scale: 1.02;
+            box-shadow: 7px 7px 7px rgb(219, 168, 168);
+            transition: 0.2s;
+        }
+    }
+}
