@@ -1,0 +1,99 @@
+@import 'mixins';
+@import 'vars';
+
+.registration{
+    @include flex_between;
+    padding-top: 64px;
+    padding-bottom: 96px;
+    align-items: flex-start;
+
+
+    &__left{
+        display: flex;
+        flex-direction: column;
+        max-width: 360px; 
+    }
+    &__label{
+        @include normal_text;
+        color: #222;
+        font-size: 16px;
+        font-weight: 300;
+        margin-bottom: 20px;
+    }
+    &__input{
+        @include normal_text;
+        color: #B1B1B1;
+        font-size: 13px;
+        font-weight: 300;
+        border: 1px solid #A4A4A4;
+        padding: 12px 16px 15px;
+        margin-bottom: 20px;
+    }
+    &__input:hover{
+        scale: 1.01;
+        box-shadow: 5px 5px 5px rgb(223, 219, 219);
+        transition: 0.15s;
+        outline: none;
+    }
+    &__input:focus{
+        outline: none;
+    }
+    &__radio{
+        display: flex;
+        margin-top: 15px;
+        margin-bottom: 25px;
+    }
+    &__text{
+        @include normal_text;
+        color: #B1B1B1;
+        font-size: 13px;
+        font-weight: 300;
+    }
+    &__btn{
+        max-width: 167px;
+        margin-top: 39px;
+        padding: 16px 29px;
+        background-color: $mainDecorateColor;
+        color: #FFF;
+        font-size: 14px;
+        font-weight: 400;
+        border: none;
+        @include normal_text;
+
+        &_svg{
+            margin-left: 20px;
+        }
+    }
+    &__btn:hover{
+        scale: 1.02;
+        box-shadow: 7px 7px 7px rgb(217, 166, 166);
+    }
+    &__btn:focus{
+        outline: none;
+    }
+    &__right{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        max-width: 650px;
+    }
+    &__description{
+        @include normal_text;
+        color: #000;
+        font-size: 24px;
+        font-weight: 300;
+    }
+    &__list{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+}
+.gender{
+    @include normal_text;
+    color: #000;
+    font-size: 11px;
+    font-weight: 300;
+    margin-left: 10px;
+    margin-right: 20px;
+}

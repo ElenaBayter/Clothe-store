@@ -479,6 +479,115 @@ summary::-webkit-details-marker {
   transition: 0.2s;
 }
 
+.registration {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 64px;
+  padding-bottom: 96px;
+  align-items: flex-start;
+}
+.registration__left {
+  display: flex;
+  flex-direction: column;
+  max-width: 360px;
+}
+.registration__label {
+  font-family: "Lato";
+  font-style: normal;
+  line-height: normal;
+  color: #222;
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+.registration__input {
+  font-family: "Lato";
+  font-style: normal;
+  line-height: normal;
+  color: #B1B1B1;
+  font-size: 13px;
+  font-weight: 300;
+  border: 1px solid #A4A4A4;
+  padding: 12px 16px 15px;
+  margin-bottom: 20px;
+}
+.registration__input:hover {
+  scale: 1.01;
+  box-shadow: 5px 5px 5px rgb(223, 219, 219);
+  transition: 0.15s;
+  outline: none;
+}
+.registration__input:focus {
+  outline: none;
+}
+.registration__radio {
+  display: flex;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+.registration__text {
+  font-family: "Lato";
+  font-style: normal;
+  line-height: normal;
+  color: #B1B1B1;
+  font-size: 13px;
+  font-weight: 300;
+}
+.registration__btn {
+  max-width: 167px;
+  margin-top: 39px;
+  padding: 16px 29px;
+  background-color: #F16D7F;
+  color: #FFF;
+  font-size: 14px;
+  font-weight: 400;
+  border: none;
+  font-family: "Lato";
+  font-style: normal;
+  line-height: normal;
+}
+.registration__btn_svg {
+  margin-left: 20px;
+}
+.registration__btn:hover {
+  scale: 1.02;
+  box-shadow: 7px 7px 7px rgb(217, 166, 166);
+}
+.registration__btn:focus {
+  outline: none;
+}
+.registration__right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 650px;
+}
+.registration__description {
+  font-family: "Lato";
+  font-style: normal;
+  line-height: normal;
+  color: #000;
+  font-size: 24px;
+  font-weight: 300;
+}
+.registration__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.gender {
+  font-family: "Lato";
+  font-style: normal;
+  line-height: normal;
+  color: #000;
+  font-size: 11px;
+  font-weight: 300;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
 * {
   margin: 0;
   padding: 0;
