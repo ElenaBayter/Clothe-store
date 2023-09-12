@@ -34,7 +34,8 @@ a{
 }
 nav.header__right {
     display: flex;
-    gap: 16px;
+    align-items:center;
+    gap: 24px;
 }
 .logo {
     margin-right: 20px;
@@ -274,6 +275,7 @@ nav.header__right {
     padding-top: 96px;
     padding-bottom: 126px;
     @include flex_between;
+    background-size: cover;
 }
 .subscribe-card{
     display: flex;

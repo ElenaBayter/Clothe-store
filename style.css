@@ -628,7 +628,8 @@ a {
 
 nav.header__right {
   display: flex;
-  gap: 16px;
+  align-items: center;
+  gap: 24px;
 }
 
 .logo {
@@ -904,6 +905,7 @@ nav.header__right {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-size: cover;
 }
 
 .subscribe-card {
