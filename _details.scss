@@ -140,6 +140,10 @@ summary {
         display: flex;
         align-items: center;
         gap: 10px;
+        &:hover{
+            scale: 1.05;
+            text-shadow: 4px 4px 4px #cfc8c8;
+        }
     }
 
     &__heading{

@@ -143,6 +143,7 @@
         font-size: 11px;
         font-weight: 400;
         margin-bottom: 12px;
+        @include normal_text;
 
         &_margin{
             margin-left: 25px;
@@ -153,6 +154,7 @@
         font-size: 16px;
         font-weight: 300;
         margin-bottom: 17px;
+        @include normal_text;
 
         &_color{
             margin-left: 25px;
@@ -174,6 +176,31 @@
             scale: 1.02;
             box-shadow: 7px 7px 7px rgb(219, 168, 168);
             transition: 0.2s;
+        }
+    }
+}
+@media (max-width: 1024px) and (min-width: 768px){
+    .cart{
+        flex-direction: column;
+        gap: 64px;
+
+        &__right{
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    .cart-form{
+        &__input{
+            width: 360px;
+        }
+    }
+    .cart-total{
+        width: 360px;
+        height: 214px;
+
+        &__btn{
+            padding: 15px 20px;
         }
     }
 }

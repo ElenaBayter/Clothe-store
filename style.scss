@@ -12,7 +12,10 @@
 a{
     text-decoration: none;
 }
-
+.center{
+    padding-left: calc(50% - $contentWidth/2);
+    padding-right: calc(50% - $contentWidth/2);
+}
 .container {
     @include main_padding;
     margin: 0 auto;
@@ -40,17 +43,16 @@ nav.header__right {
 .logo {
     margin-right: 20px;
 }
-
 .main {
-    background: #F1E4E6;
-}
-.flex-main {
     display: flex;
 }
 .main-right {
+    background: #F1E4E6;
+    width: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    padding-left: 64px;
 }
 .main-pic{
     width: 50vw;
@@ -62,7 +64,8 @@ nav.header__right {
     font-style: normal;
     font-weight: 900;
     line-height: normal;
-    margin-left: 16px;
+    border-left: 12px solid $mainDecorateColor;
+    padding-left: 16px;
 }
 .main-black {
     color: #222;
@@ -99,6 +102,10 @@ nav.header__right {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    opacity: 0.85;
+}
+.square-link:hover{
+    opacity: 1;
 }
 .women {
     background-size: cover;
@@ -137,6 +144,10 @@ nav.header__right {
     padding-top: 65px;
     padding-bottom: 65px;
     width: 100%;
+    opacity: 0.85;
+}
+.bottom-part:hover{
+    opacity: 1;
 }
 .bottom-link {
     text-decoration: none;
@@ -216,6 +227,11 @@ nav.header__right {
 .price:hover{
     text-shadow: 3px 3px 3px #d49da4;
 }
+.center_btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .btn{
     color: #F26376;
     font-family: Lato;
@@ -230,10 +246,6 @@ nav.header__right {
 .btn:hover{
     color: #FFFFFF;
     background: #F26376;
-}
-.center{
-    padding-left: calc(50% - $contentWidth/2);
-    padding-right: calc(50% - $contentWidth/2);
 }
 .product-info {
     background: rgba(34, 34, 36, 1);
@@ -388,22 +400,12 @@ nav.header__right {
     fill: #FFFFFF;
 }
 
-
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-    .container {
-        max-width: 734px;
-    }
     $contentWidth: 736px;
     .center{
-    padding-left: calc(50% - $contentWidth/2);
-    padding-right: calc(50% - $contentWidth/2);
+        padding-left: calc(50% - $contentWidth/2);
+        padding-right: calc(50% - $contentWidth/2);
 }
-    .logo {
-        margin-right: 20px;
-    }
-    .main-pic{
-        min-width: 386px;
-    }
     .main-title {
         color: #222;
         font-family: Lato;
@@ -444,19 +446,10 @@ nav.header__right {
     .small-dsc {
         margin-bottom: 73px;
     }
-    .product-info .flex{
-        display: flex;
-        flex-direction: column;
-        gap: 48px;
-    }
     .info-card{
         max-width: 360px;
     }
     .product-info{
-        margin-bottom: 60px;
-    }
-    .subscribe .flex{
-        display: flex;
         flex-direction: column;
         gap: 48px;
     }
@@ -464,27 +457,25 @@ nav.header__right {
         width: 360px;
     }
     .subscribe{
-        padding: 0 0 43px 0;
+        padding-bottom: 140px;
+        flex-direction: column;
+        gap: 48px;
+        padding-top: 60px;
     }
-   
     .footer{
         padding: 24px 3%;
     }
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
-    $contentWidth: 344px;
+        $contentWidth: 344px;
     .center{
-    padding-left: calc(50% - $contentWidth/2);
-    padding-right: calc(50% - $contentWidth/2);
-
-}
-    .container{
-        padding: 0 3%;
+        padding-left: calc(50% - $contentWidth/2);
+        padding-right: calc(50% - $contentWidth/2);
     }
-    .user, .cart, .main-pic{
+    .user, .cart-icon, .main-pic{
         display: none
     }
-    .flex-main{
+    .main{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -513,21 +504,11 @@ nav.header__right {
     .item-picture{
         max-width: 89vw;
     }
-    .product-info .flex{
-        display: flex;
-        flex-direction: column;
-        gap: 48px;
-    }
     .info-card{
         max-width: 340px;
     }
     .product-info{
         margin-bottom: 60px;
-    }
-    .subscribe .flex{
-        display: flex;
-        flex-direction: column;
-        gap: 46px;
     }
     .subscribe-card{
         width: 343px;
@@ -548,9 +529,9 @@ nav.header__right {
     .footer{
         padding: 43px 3% 9px 3%;
     }
-    .footer .flex{
-        display: flex;
-        flex-direction: column-reverse;
-        gap: 40px;
-    }
+    // .footer .flex{
+    //     display: flex;
+    //     flex-direction: column-reverse;
+    //     gap: 40px;
+    // }
 }
