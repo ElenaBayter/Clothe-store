@@ -40,9 +40,7 @@
     background-image: url('data:image/svg+xml,<svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="dashicons:arrow-left-alt2"><path id="Vector" d="M21.6998 7.7499L13.9498 15.4999L21.6998 23.2499L20.1498 26.3499L9.2998 15.4999L20.1498 4.6499L21.6998 7.7499Z" fill="black"/></g></svg>');
     background-color: #2A2A2A26;
 }
-// .carousel-control-prev-icon:hover path{
-//     fill: $mainDecorateColor;
-// }
+
 .carousel-control-next-icon {
     background-image: url('data:image/svg+xml,<svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="dashicons:arrow-right-alt2"><path id="Vector" d="M9.2998 23.2499L17.0498 15.4999L9.2998 7.7499L10.8498 4.6499L21.6998 15.4999L10.8498 26.3499L9.2998 23.2499Z" fill="%23F16D7F"/></g></svg>');
     background-color: #2A2A2A26;
@@ -50,6 +48,10 @@
 .carousel-control-next, .carousel-control-prev {
     width: 2.5%;
 }
+.carousel-item-next, .carousel-item-prev, .carousel-item.active {
+    display: flex;
+    justify-content: center;
+    }
 .productcard{
     padding-top: 60px;
     margin-bottom: 120px;
@@ -139,6 +141,33 @@
     
     }
 }
+@media (min-width: 375px) and (max-width: 767px){
+    .path{
+        padding-top: 24px;
+        padding-bottom: 46px;
+        flex-direction: column;
+        gap: 32px;
+    }
+    .carousel-control-next, .carousel-control-prev {
+        width: 47px;
+    }
+    .productcard {
+        padding-top: 0;
 
-
-
+        &__wrapper{
+            margin-top: 0;
+        }
+        &__description{
+            width: 90%;
+        }
+        &__line{
+            width: 70%;
+        }
+        &__dropdown_item{
+            font-size: 10px;
+        }
+    }
+    .item__none{
+        display: none;
+    }
+}

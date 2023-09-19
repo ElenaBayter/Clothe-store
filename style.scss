@@ -185,10 +185,41 @@ nav.header__right {
 }
 .item {
     max-width: 360px;
+    position: relative;
+    &__btn{
+        border: 1px solid #FFFFFF;
+        color: #FFF;
+        font-size: 14px;
+        font-weight: 400;
+        @include normal_text;
+        padding: 13px;
+        margin-left: 12px;
+        position: absolute;
+        top: 188px;
+        left: 111px;
+        z-index: 10;
+        display: none;
+        background: transparent;
+        cursor: pointer;
+    }
+    &__svg{
+        margin-right: 12px;
+    }
 }
 .item:hover{
     box-shadow: 5px 5px 7px rgb(168, 165, 165);
 }
+
+.item:hover .item-picture{
+    // background-color: #9f9f9f;
+    // background-blend-mode: overlay;
+    filter: brightness(0.5);
+}
+.item:hover .item__btn{
+    display: flex;
+    align-items: center;
+}
+
 .item-discription{
     padding: 24px 16px;
     display: flex;
@@ -440,6 +471,9 @@ nav.header__right {
         grid-template-columns: repeat(2, 1fr);
         gap: 16px;
     }
+    .item__none{
+        display: none;
+    }
     .list-title {
         margin-bottom: 3px;
     }
@@ -480,6 +514,17 @@ nav.header__right {
         justify-content: center;
         align-items: center;
         height: 80vh;
+        background-color: #F1E4E6
+    }
+    .main-right{
+        justify-content: center;
+    }
+    .main-title{
+        font-size: 38px;
+        line-height: 26px;
+    }
+    .main-black, .main-pink{
+        font-size: 20px;
     }
     .top-part{
         display: flex;
@@ -504,17 +549,23 @@ nav.header__right {
     .item-picture{
         max-width: 89vw;
     }
+    .product-info{
+        flex-direction: column;
+        gap: 48px;
+    }
     .info-card{
         max-width: 340px;
     }
-    .product-info{
-        margin-bottom: 60px;
-    }
     .subscribe-card{
-        width: 343px;
+        min-width: 343px;
     }
     .subscribe{
-        padding: 0 0 43px 0;
+        flex-direction: column;
+        gap: 48px;
+    }
+    .subscribe{
+        padding-top: 64px;
+        padding-bottom: 109pxpx;
     }
     .subscribe-text{
         font-size: 18px;
@@ -526,12 +577,12 @@ nav.header__right {
         font-size: 14px;
         line-height: 153.2%;
     }
-    .footer{
-        padding: 43px 3% 9px 3%;
+    .ft_none{
+        display: none;
     }
-    // .footer .flex{
-    //     display: flex;
-    //     flex-direction: column-reverse;
-    //     gap: 40px;
-    // }
+    .footer{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 40px;
+    }
 }

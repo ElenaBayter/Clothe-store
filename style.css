@@ -51,6 +51,11 @@
   width: 2.5%;
 }
 
+.carousel-item-next, .carousel-item-prev, .carousel-item.active {
+  display: flex;
+  justify-content: center;
+}
+
 .productcard {
   padding-top: 60px;
   margin-bottom: 120px;
@@ -149,6 +154,35 @@
   margin-right: 22px;
 }
 
+@media (min-width: 375px) and (max-width: 767px) {
+  .path {
+    padding-top: 24px;
+    padding-bottom: 46px;
+    flex-direction: column;
+    gap: 32px;
+  }
+  .carousel-control-next, .carousel-control-prev {
+    width: 47px;
+  }
+  .productcard {
+    padding-top: 0;
+  }
+  .productcard__wrapper {
+    margin-top: 0;
+  }
+  .productcard__description {
+    width: 90%;
+  }
+  .productcard__line {
+    width: 70%;
+  }
+  .productcard__dropdown_item {
+    font-size: 10px;
+  }
+  .item__none {
+    display: none;
+  }
+}
 summary {
   display: block;
 }
@@ -330,6 +364,7 @@ summary::-webkit-details-marker {
   display: flex;
   flex-direction: row;
   position: relative;
+  align-self: center;
   width: 650px;
   box-shadow: 10px 10px 10px rgb(223, 219, 219);
   border-radius: 0;
@@ -516,6 +551,54 @@ summary::-webkit-details-marker {
     padding: 15px 20px;
   }
 }
+@media (max-width: 767px) and (min-width: 375px) {
+  .card {
+    width: 350px;
+  }
+  .card__desc {
+    padding-top: 14px;
+    padding-left: 22px;
+  }
+  .card__img {
+    width: 143px;
+  }
+  .card__title {
+    font-size: 16px;
+  }
+  .card__text {
+    font-size: 14px;
+  }
+  .card__text_color {
+    font-size: 14px;
+  }
+  .card__close {
+    width: 10px;
+    top: 14px;
+    left: 326px;
+  }
+  .cart {
+    flex-direction: column;
+    gap: 64px;
+    padding-bottom: 96px;
+  }
+  .cart__right {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cart-buttons {
+    gap: 9px;
+  }
+  .cart-buttons__btn {
+    padding: 9px 17px;
+    font-size: 12px;
+  }
+  .cart-form__input {
+    width: 350px;
+  }
+  .cart-total__btn {
+    padding: 15px 30px;
+  }
+}
 .registration {
   display: flex;
   justify-content: space-between;
@@ -636,6 +719,15 @@ summary::-webkit-details-marker {
   .registration {
     padding-top: 40px;
     gap: 22px;
+  }
+  .registration__description {
+    font-size: 16px;
+  }
+}
+@media (max-width: 767px) and (min-width: 375px) {
+  .registration {
+    flex-direction: column;
+    gap: 40px;
   }
   .registration__description {
     font-size: 16px;
@@ -853,10 +945,41 @@ nav.header__right {
 
 .item {
   max-width: 360px;
+  position: relative;
+}
+.item__btn {
+  border: 1px solid #FFFFFF;
+  color: #FFF;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Lato";
+  font-style: normal;
+  line-height: normal;
+  padding: 13px;
+  margin-left: 12px;
+  position: absolute;
+  top: 188px;
+  left: 111px;
+  z-index: 10;
+  display: none;
+  background: transparent;
+  cursor: pointer;
+}
+.item__svg {
+  margin-right: 12px;
 }
 
 .item:hover {
   box-shadow: 5px 5px 7px rgb(168, 165, 165);
+}
+
+.item:hover .item-picture {
+  filter: brightness(0.5);
+}
+
+.item:hover .item__btn {
+  display: flex;
+  align-items: center;
 }
 
 .item-discription {
@@ -1143,6 +1266,9 @@ nav.header__right {
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
   }
+  .item__none {
+    display: none;
+  }
   .list-title {
     margin-bottom: 3px;
   }
@@ -1182,6 +1308,17 @@ nav.header__right {
     justify-content: center;
     align-items: center;
     height: 80vh;
+    background-color: #F1E4E6;
+  }
+  .main-right {
+    justify-content: center;
+  }
+  .main-title {
+    font-size: 38px;
+    line-height: 26px;
+  }
+  .main-black, .main-pink {
+    font-size: 20px;
   }
   .top-part {
     display: flex;
@@ -1206,17 +1343,23 @@ nav.header__right {
   .item-picture {
     max-width: 89vw;
   }
+  .product-info {
+    flex-direction: column;
+    gap: 48px;
+  }
   .info-card {
     max-width: 340px;
   }
-  .product-info {
-    margin-bottom: 60px;
-  }
   .subscribe-card {
-    width: 343px;
+    min-width: 343px;
   }
   .subscribe {
-    padding: 0 0 43px 0;
+    flex-direction: column;
+    gap: 48px;
+  }
+  .subscribe {
+    padding-top: 64px;
+    padding-bottom: 109pxpx;
   }
   .subscribe-text {
     font-size: 18px;
@@ -1228,7 +1371,12 @@ nav.header__right {
     font-size: 14px;
     line-height: 153.2%;
   }
+  .ft_none {
+    display: none;
+  }
   .footer {
-    padding: 43px 3% 9px 3%;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 40px;
   }
 }/*# sourceMappingURL=style.css.map */

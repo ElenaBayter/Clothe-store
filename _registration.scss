@@ -118,6 +118,17 @@
         }
     }
 }
+@media (max-width: 767px) and 
+(min-width: 375px){
+    .registration{
+        flex-direction: column;
+        gap: 40px;
+        
+        &__description{
+            font-size: 16px;
+        }
+    }
+}
 
 
 
