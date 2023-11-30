@@ -134,6 +134,7 @@ summary {
     
     &__details{
         position: relative;
+        z-index: 1;
     }
 
     &__summary{
@@ -171,7 +172,7 @@ summary {
         padding: 7px 30px 11px 9px;
         position: absolute;
         left: -9px;
-        top: 22px
+        top: 22px;
     }
 }
 

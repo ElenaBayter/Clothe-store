@@ -305,6 +305,7 @@ summary::-webkit-details-marker {
 }
 .sort__details {
   position: relative;
+  z-index: 1;
 }
 .sort__summary {
   display: flex;
