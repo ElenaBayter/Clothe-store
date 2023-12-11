@@ -312,6 +312,24 @@ nav.header__right {
     font-weight: 300;
     line-height: normal;
 }
+.cart_container{
+    display: none;
+    flex-direction: column;
+    gap: 40px;
+    padding-bottom: 96px;
+
+    &__title{
+        color: #222;
+        font-family: Lato;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-align: center;
+        margin-bottom: 64px;
+        margin-top: 96px;
+    }
+}
 .subscribe{
     background: linear-gradient(rgba(254, 254, 254, 0.311), rgba(255, 254, 254, 0.269)),
     url("./img/subscribe-bg.png");

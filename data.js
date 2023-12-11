@@ -49,8 +49,3 @@ const goodsData = `
         "price": "52.00"
     }
 ]`;
-// console.log(goodsData);
-// const data = JSON.parse(goodsData);
-// data.forEach((element) => {
-//   console.log(element.img);
-// });
